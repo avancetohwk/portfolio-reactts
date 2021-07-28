@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { ImgHTMLAttributes } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Navbar from './components/navbar';
 import reportWebVitals from './reportWebVitals';
+import Ninja from './assets/Ninja-transparent.png';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Navbar />
+    <img style={{position:'absolute', height:'90vh',right:0,bottom:0}} src={Ninja}></img>
   </React.StrictMode>,
   document.getElementById('root')
 );
