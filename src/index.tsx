@@ -8,8 +8,9 @@ import Ninja from './assets/Ninja-transparent.png';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
-    <img style={{position:'absolute', height:'90vh',right:0,bottom:0}} src={Ninja}></img>
+    <App/>
+    
+    <img className="bg-img" src={Ninja}></img>
   </React.StrictMode>,
   document.getElementById('root')
 );

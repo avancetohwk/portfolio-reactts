@@ -41,12 +41,12 @@ export const StyledBurger = styled.div<INav>`
 `
 
 export const Nav = styled.nav`
-  height: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #fdfdfdfa;
   align-items: center;
   position: relative;
+  
 
   @media (max-width: 678px) {
     width: 100vw;
@@ -66,18 +66,24 @@ export const Nav = styled.nav`
 `
 
 export const Ul = styled.ul<INav>`
-  list-style: none;
-  display: flex;
-  flex-flow: row nowrap;
-  position: absolute;
-  width: 90%;
-  top: 0;
-  justify-content: flex-end;
-  margin-top: 0px;
-  align-items: center;
-  font-size: 18px;
-  height: 110px;
-  margin-left: 20px;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    justify-content: flex-end;
+    margin-top: 0px;
+    
+    font-size: 18px;
+    height: 10%;
+    padding: 0;
+    margin: 0;
+
+
+    
+
+  
 
   a {
     text-decoration: none;
@@ -91,55 +97,70 @@ export const Ul = styled.ul<INav>`
   }
 
   li {
-    padding: 18px 10px;
+    padding: 2em 1em;
   }
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #fdfdfdfa;
     position: fixed;
     transform: ${(props) => props.open ? 'translateX(0)' : 'translateX(100%)'};
     top: -16px;
     right: 0;
     height: 100%;
     width: 180px;
-    padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     z-index: 9;
     justify-content: normal;
+    align-items:center;
+    background: rgb(195 195 195 / 25%);
+    box-shadow: 0 8px 5px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    padding: 1em;
+
+    // #navlink-container{
+        
+    // }
 
     li {
       color: #000;
-      margin-right: 34px;
 
       &:hover {
         color: #0DADEA;
       }
     }
+
+    li:first-of-type {
+        margin-top: 5em;
+      }
+
   }
 `
 
 export const Logo = styled.img`
-  margin: 20px 50px 20px 7%;
-  width: 160px;
-  height: 70px;
+  margin: 2em 1em;
+  width: 3em;
+  height: 3em;
   object-fit: contain;
-
-  @media (max-width: 1250px) {
-    margin: 20px 50px 20px 5%;
+  border-radius: 50%;
+  display: none;
+  @media screen and (min-width:769px){
+      display:flex
   }
 
 `
 
 export const LogoUl = styled.img`
-  margin: 20px 50px 20px 5%;
   display: none;
-
+  border-radius: 50%;
   @media (max-width: 768px) {
     display: flex;
-    width: 160px;
-    height: 70px;
+    width: 3em;
+    height: 3em;
     object-fit: contain;
+    position: absolute;
+    left: 0;
+    margin: 0.5em;
   }
 `
 export const Icon = styled.div`

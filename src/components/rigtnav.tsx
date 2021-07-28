@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles';
 
-import Logo from '../assets/logo.png';
+import Logo from '../assets/logo-edited.png';
 // import IconReact from '../../assets/react.svg';
 // import IconMegamen from '../../assets/megamen.png';
 // import IconMario from '../../assets/mario.png';
@@ -22,31 +22,31 @@ function RightNav(props: Props) {
     <Router>
       <S.Ul open={props.open}>
         <S.LogoUl src={Logo} alt={'Gustavo Scarpim'} />
-
-        <NavLink to="/about"
-          activeStyle={{
-            fontWeight: "bold",
-            color: "#0DADEA"
-          }}
-        >
-          <li>About</li>
-        </NavLink>
-        <NavLink to="/work"
-          activeStyle={{
-            fontWeight: "bold",
-            color: "#0DADEA"
-          }}
-        >
-          <li>Work</li>
-        </NavLink>
-        <NavLink to="/contact"
-          activeStyle={{
-            fontWeight: "bold",
-            color: "#0DADEA"
-          }}
-        >
-          <li>Contact</li>
-        </NavLink>
+            <NavLink to="/about"
+            activeStyle={{
+                fontWeight: "bold",
+                color: "#0DADEA"
+            }}
+            >
+            <li>About</li>
+            </NavLink>
+            <NavLink to="/work"
+            activeStyle={{
+                fontWeight: "bold",
+                color: "#0DADEA"
+            }}
+            >
+            <li>Work</li>
+            </NavLink>
+            <NavLink to="/contact"
+            activeStyle={{
+                fontWeight: "bold",
+                color: "#0DADEA"
+            }}
+            >
+            <li>Contact</li>
+            </NavLink>
+        
         
       </S.Ul>
 
