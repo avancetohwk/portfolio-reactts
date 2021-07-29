@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App/>
     
-    <img className="bg-img" src={Ninja}></img>
+    {/* <img className="bg-img" src={Ninja}></img> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

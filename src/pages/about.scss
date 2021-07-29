@@ -5,8 +5,9 @@
     .card{
         //background-color: red;
         height: 100%;
-        width: 50vw;
+        max-width: 75vw;
         display: flex;
+        width: fit-content;
         // flex-direction: column;
         // justify-content: flex-end;
         position: relative;
@@ -29,9 +30,8 @@
         
 
         .inner-card{
-            background: rgba(195, 195, 195, 0.25);
-            //box-shadow: 0 8px 5px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur( 4px );
+            background: rgba(250, 249, 246, 0.75);
+            backdrop-filter: blur(0.75em);
             -webkit-backdrop-filter: blur( 4px );
 
             display:flex;
@@ -39,32 +39,101 @@
             padding: 5em;
             margin: 5em 0;
 
-            #text-container{
-                padding: 3em 0;
-                p{
-                    text-align: justify;
+            .inner-card-content{
+                display: flex;
+
+                #text-container{
+                    padding: 0 2em; //3em 0;
+                    p{
+                        text-align: justify;
+                    }
+                }
+
+                #skill-container{
+                    padding: 3em 0;
+                    p{
+                        text-align: justify;
+                    }
                 }
             }
+
+            
 
             
         }
     }
 
+    @media (max-width: 600px) {
+        .inner-card-content{
+            flex-wrap: wrap;
+        }
+    }
+
+
     @media (max-width: 768px) {
+        .card{
+            // width: 80vw;
+            // flex-direction: column;
+
+            #portrait-container{
+                
+                height: unset;
+                width:auto;
+                z-index: 3;
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                img{
+                    height: 20vh;
+                    position: unset;
+                    margin: 0;
+                }
+            }
+
+            .inner-card{
+                margin: 0;
+                padding: 1em;
+
+                
+
+                #text-container{
+                    padding: 1em;
+                }
+            }
+    
+        }
+    }
+
+    @media (max-width: 1024px) {
         .card{
             width: 80vw;
             flex-direction: column;
 
             #portrait-container{
                 
-                height: 100%;
+                height: unset;
                 width:auto;
                 z-index: 3;
                 position: relative;
+                display: flex;
+                justify-content: center;
     
                 img{
                     height: 20vh;
-                   
+                    position: unset;
+                    margin: 0;
+                }
+            }
+
+            .inner-card{
+                margin: 0;
+                padding: 1em;
+
+                
+
+                #text-container{
+                    padding: 1em;
                 }
             }
     

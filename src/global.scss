@@ -6,6 +6,10 @@
         display: none;
     }
 
+    .screen-md{
+        display: none;
+    }
+
     .screen-lg{
         display: block;
     }
@@ -14,6 +18,25 @@
         margin-top:20%;
 
         .screen-sm{
+            display: block;
+        }
+
+        .screen-md{
+            display: none;
+        }
+    
+        .screen-lg{
+            display: none;
+        }
+    }
+
+    @media (max-width: 1024px) {
+
+        .screen-sm{
+            display: none;
+        }
+
+        .screen-md{
             display: block;
         }
     
