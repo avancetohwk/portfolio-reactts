@@ -2,7 +2,7 @@ import React, { ImgHTMLAttributes } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Navbar from './components/navbar';
+import Navbar from './components/navigation/navbar';
 import reportWebVitals from './reportWebVitals';
 import Ninja from './assets/Ninja-transparent.png';
 

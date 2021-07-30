@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './global.scss';
-import Navbar from './components/navbar';
+import Navbar from './components/navigation/navbar';
 
 function App() {
   return (

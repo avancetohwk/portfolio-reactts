@@ -1,16 +1,16 @@
 import React from 'react'
 import * as S from './styles';
 
-import Logo from '../assets/logo-edited.png';
+import Logo from '../../assets/logo-edited.png';
 // import IconReact from '../../assets/react.svg';
 // import IconMegamen from '../../assets/megamen.png';
 // import IconMario from '../../assets/mario.png';
 // import IconTurtle from '../../assets/turtle.png';
 
 import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react-router-dom";
-import About from '../pages/about';
-import Work from '../pages/work';
-import Contact from '../pages/contact';
+import About from '../../pages/about';
+import Work from '../../pages/work';
+import Contact from '../../pages/contact';
 
 type Props = {
   open: boolean;

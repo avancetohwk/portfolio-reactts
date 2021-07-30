@@ -2,6 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+      
+
+
+
     .card{
         //background-color: red;
         height: 100%;
@@ -30,8 +35,8 @@
         
 
         .inner-card{
-            background: rgba(250, 249, 246, 0.75);
-            backdrop-filter: blur(0.75em);
+            background: rgba(250, 249, 246, 0.25);
+            backdrop-filter: blur(0.5em);
             -webkit-backdrop-filter: blur( 4px );
 
             display:flex;
@@ -39,21 +44,34 @@
             padding: 5em;
             margin: 5em 0;
 
+
+            border-radius: 50px;
+            //background: #e0e0e0;
+            box-shadow:  0.1em 0.1em 0.2em rgb(250, 249, 246),
+                        -0.1em -0.1em 0.2em rgb(255, 255, 255);
+
             .inner-card-content{
                 display: flex;
 
                 #text-container{
                     padding: 0 2em; //3em 0;
+                    width: 50%;
                     p{
                         text-align: justify;
                     }
                 }
 
-                #skill-container{
+                #skills-container{
                     padding: 3em 0;
+                    width: 50%;
                     p{
                         text-align: justify;
                     }
+            
+                    
+                    
+
+                    
                 }
             }
 
@@ -99,6 +117,11 @@
 
                 #text-container{
                     padding: 1em;
+                    width: 100% !important;
+                }
+
+                #skills-container{
+                    width: 100% !important; 
                 }
             }
     

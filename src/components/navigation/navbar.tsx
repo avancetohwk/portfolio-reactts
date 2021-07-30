@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 
-import Logo from '../assets/logo-edited.png';
+import Logo from '../../assets/logo-edited.png';
 import Burger from './burger';
 
 type Props = {
