@@ -54,14 +54,6 @@ const PHOTOS = [
       imageUrl:
         "https://cdn.pixabay.com/photo/2016/01/19/17/41/friends-1149841_960_720.jpg",
     },
-    {
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2020/02/25/19/16/stawberry-4879794_960_720.jpg",
-    },
-    {
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2019/12/11/15/12/dogs-4688586_960_720.jpg",
-    },
   ];
 
   const masonryOptions = {

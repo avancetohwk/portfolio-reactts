@@ -76,7 +76,7 @@ export const Ul = styled.ul<INav>`
     margin-top: 0px;
     
     font-size: 18px;
-    height: 10%;
+    
     padding: 0;
     margin: 0;
 

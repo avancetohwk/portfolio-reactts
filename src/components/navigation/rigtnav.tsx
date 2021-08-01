@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route, NavLink, Redirect } from "react
 import About from '../../pages/about';
 import Work from '../../pages/work';
 import Contact from '../../pages/contact';
+import Admin from '../../pages/admin';
 
 type Props = {
   open: boolean;
@@ -47,7 +48,14 @@ function RightNav(props: Props) {
             <li>Contact</li>
             </NavLink>
         
-        
+            <NavLink to="/admin"
+            activeStyle={{
+                fontWeight: "bold",
+                color: "#0DADEA"
+            }}
+            >
+            <li>Admin</li>
+            </NavLink>
       </S.Ul>
 
 
@@ -58,7 +66,8 @@ function RightNav(props: Props) {
         </Route>
         <Route exact path="/contact" component={Contact}>
         </Route>
-        
+        <Route exact path="/admin" component={Admin}>
+        </Route>
    
 
         <Redirect to='/about' />
