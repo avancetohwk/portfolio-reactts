@@ -3,8 +3,8 @@
     width: 80%;
     //max-width: 960px;
     //height: 780px;
-    margin: auto;
-
+    //margin: auto;
+    margin-top: 1em;
     position: relative;
 
     @mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
@@ -20,6 +20,7 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+        text-align: left;
     }
 
     .charts {
