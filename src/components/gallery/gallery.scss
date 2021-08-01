@@ -1,0 +1,43 @@
+.photo-list{
+    width: 90%;
+    list-style: none;
+    margin: 20px auto;
+    
+    .photo-item {
+        display: flex;
+        width: 20vw;
+        box-shadow:  0.1em 0.1em 0.2em #6b6a69,
+                            -0.1em -0.1em 0.2em rgb(255, 255, 255);
+        margin: 0.5em;
+    
+        img {
+            display: flex;
+            width: 100%;
+            // border: 4px double rgba(0, 0, 0, .12);
+        }
+    }
+
+    
+
+
+    
+
+    @media (max-width: 1024px) {
+        .photo-item {
+            width: 30vw;
+        }
+    }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 600px) {
+        
+        .photo-item {
+            width: 40vw;
+        }
+    }
+    
+}
+
+

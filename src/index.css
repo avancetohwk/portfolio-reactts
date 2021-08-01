@@ -1,32 +1,20 @@
 html, body {
-  /* height: 100%; width: 100%; */
   padding: 0; margin: 0;
   position: relative;
 }
 
 body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   width: 100%;
   width: 100%;
   position: relative;
-  /* background: #FFF url(assets/Ninja-transparent.png) no-repeat bottom right;
-  background-size: 45vh;
-  background-attachment: fixed; */
 }
-
-/* .wantOverlay {
-  width: 200px;
-  height: 100px;
-  overflow-y: scroll;
-  position: relative;
-} */
-
-/* .wantOverlay::before {
-  content: '';
-  position: fixed;
-  width: inherit;
-  height: inherit;
-  background: rgba(150, 150, 150, .45);
-} */
 
 body::before {
   content: "";
@@ -43,16 +31,6 @@ body::before {
   opacity: 0.2;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -65,6 +43,10 @@ code {
   bottom:0;
   opacity:0.2;
   height: 45vh;
+}
+
+ul{
+  list-style-type: none;
 }
 
 
