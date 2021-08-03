@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Masonry from 'react-masonry-component';
+import useFirestore from '../../hooks/useFirestore';
 import './gallery.scss'
 
 
@@ -63,29 +64,31 @@ const PHOTOS = [
     itemSelector: ".photo-item",
   };
 
-class Gallery extends React.Component {
-    render() {
-        const childElements = PHOTOS.map(function(element){
-           return (
-                <li className="photo-item">
-                    <img src={element.imageUrl} />
-                </li>
-            );
-        });
+const Gallery: React.FC = ()=>{    
+
+  const {docs} = useFirestore('images');
+  console.log(docs)
+  const childElements = docs.map(function(element){
+      return (
+          <li className="photo-item">
+              <img src={element.url} />
+          </li>
+      );
+  });
+
+  return (
+      <Masonry
+          className={'photo-list'} // default ''
+          elementType={'div'} // default 'div'
+          options={masonryOptions} // default {}
+          disableImagesLoaded={false} // default false
+          updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+          //imagesLoadedOptions={imagesLoadedOptions} // default {}
+      >
+          {childElements}
+      </Masonry>
+  );
     
-        return (
-            <Masonry
-                className={'photo-list'} // default ''
-                elementType={'div'} // default 'div'
-                options={masonryOptions} // default {}
-                disableImagesLoaded={false} // default false
-                updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-                //imagesLoadedOptions={imagesLoadedOptions} // default {}
-            >
-                {childElements}
-            </Masonry>
-        );
-    }
 }
 
 export default Gallery;

@@ -4,12 +4,12 @@ import ProgressBar from "../components/progressbar/progressbar";
 
 
 const Admin = () => {
-    const [file, setFile] = useState<any | null>(null);
+    const [files, setFile] = useState<any | null>(null);
     const [error, setError] = useState<any | null>(null);
 
 
     const changeHandler = (e: any) =>{
-        let selected = e.target.files[0];
+        let selected = e.target.files;
         if(selected){
             setFile(selected);
             setError("");
@@ -26,13 +26,14 @@ const Admin = () => {
             type='file'
             id='photo'
             name='photo'
+            multiple={true}
             accept='image/png, image/jpeg'
             onChange={changeHandler}
             ></input>
             <div className="output">
                 {error && <div className="error">{error}</div>}
-                { file && <div>{file.name}</div>}
-                { file && <ProgressBar file={file} setFile={setFile}></ProgressBar>}
+                {/* { files && <div>{file.name}</div>} */}
+                { files && <ProgressBar files={files} setFile={setFile}></ProgressBar>}
             </div>
         </div>
     )
