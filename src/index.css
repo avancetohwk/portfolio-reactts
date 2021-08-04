@@ -1,12 +1,23 @@
 :root{
-  --background: #bfcbcb;
-  --primary: #202630;
+  --background: #e2e2e2;
+  --primary: #ffdac2;
+  --secondary: #c2dcff;
   --accent: #ffbf19;
   --light: #eeeeee;
 
-  --black: #09090c;
-  --grey: #a4b2bc;
-  --white: #fff;
+  --text-light: 	#FFF9F5;
+  --text-light-bg: #331400;
+
+  --text-dark: #331400;
+  --text-dark-bg: 	#FFF9F5;
+  
+
+
+
+  --primary-step-300: #c29f88;
+  --primary-step-500: #997761;
+  --primary-step-700: #704f3a;
+  --primary-step-950: #3d1e0a;
 }
 
 
@@ -31,7 +42,7 @@ body {
 
 body::before {
   content: "";
-  background: #FFF url(assets/Ninja-transparent.png) no-repeat bottom right;
+  background: var(--background) url(assets/Ninja-transparent.png) no-repeat bottom right;
   background-size: 45vh;
   background-attachment: fixed;
   width: inherit;
@@ -61,6 +72,10 @@ code {
 
 ul{
   list-style-type: none;
+}
+
+h1{
+  color: var(--text-dark)
 }
 
 

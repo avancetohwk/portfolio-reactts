@@ -16,7 +16,7 @@
         // flex-direction: column;
         // justify-content: flex-end;
         position: relative;
-        
+        align-items: center;
         #portrait-container{
             height: 100%;
             
@@ -44,12 +44,12 @@
             padding: 5em;
             margin: 5em 0;
 
-
             border-radius: 50px;
             //background: #e0e0e0;
             box-shadow:  0.1em 0.1em 0.2em rgb(250, 249, 246),
                         -0.1em -0.1em 0.2em rgb(255, 255, 255);
 
+            border: 4px solid var(--text-dark);
             .inner-card-content{
                 display: flex;
 
