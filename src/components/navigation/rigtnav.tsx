@@ -25,36 +25,39 @@ function RightNav(props: Props) {
         <S.LogoUl src={Logo} alt={'Gustavo Scarpim'} />
             <NavLink to="/about"
             activeStyle={{
-                fontWeight: "bold",
-                color: "#0DADEA"
+                fontWeight: "bold"
             }}
+            className="frame-animation"
             >
-            <li>About</li>
+            {/* <span className="animated-border"></span>
+            <span className="animated-border"></span>
+            <span className="animated-border"></span> */}
+            <li className="frame-animation-inner">About</li>
             </NavLink>
             <NavLink to="/work"
             activeStyle={{
                 fontWeight: "bold",
-                color: "#0DADEA"
             }}
+            className="frame-animation"
             >
-            <li>Work</li>
+            <li className="frame-animation-inner">Work</li>
             </NavLink>
             <NavLink to="/contact"
             activeStyle={{
-                fontWeight: "bold",
-                color: "#0DADEA"
+                fontWeight: "bold"
             }}
+            className="frame-animation"
             >
-            <li>Contact</li>
+            <li className="frame-animation-inner">Contact</li>
             </NavLink>
         
             <NavLink to="/admin"
             activeStyle={{
-                fontWeight: "bold",
-                color: "#0DADEA"
+                fontWeight: "bold"
             }}
+            className="frame-animation"
             >
-            <li>Admin</li>
+            <li className="frame-animation-inner">Admin</li>
             </NavLink>
       </S.Ul>
 

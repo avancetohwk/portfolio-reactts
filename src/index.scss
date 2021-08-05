@@ -1,0 +1,439 @@
+:root{
+  --background: #fefefe;
+  --primary: #ffdac2;
+  --secondary: #c2dcff;
+  --accent: #ffbf19;
+  --light: #eeeeee;
+
+  --text-light: 	#FFF9F5;
+  --text-light-bg: #331400;
+
+  --text-dark: #331400;
+  --text-dark-bg: 	#FFF9F5;
+  
+
+
+
+  --primary-step-300: #c29f88;
+  --primary-step-500: #997761;
+  --primary-step-700: #704f3a;
+  --primary-step-950: #3d1e0a;
+}
+
+
+
+html, body {
+  padding: 0; margin: 0;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  background: var(--background) url(assets/Ninja-transparent.png) no-repeat bottom right;
+  background-size: 45vh;
+  background-attachment: fixed;
+  width: inherit;
+  height: inherit;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.bg-img{
+  position:absolute;
+  right:0;
+  bottom:0;
+  opacity:0.2;
+  height: 45vh;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1{
+  color: var(--text-dark)
+}
+
+
+@media screen and (min-width:1024px){
+  body{
+    background-size: 65vh;
+  }
+
+
+  .bg-img{
+
+    height:65vh;
+
+  }
+}
+
+
+//animations
+.animated-border {
+  position: absolute;
+  display: block;
+}
+
+.animated-border:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 4s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+      left: -100%;
+  }
+  50%,100% {
+      left: 100%;
+  }
+}
+
+.animated-border:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 4s linear infinite;
+  animation-delay: 1s
+}
+
+@keyframes btn-anim2 {
+  0% {
+      top: -100%;
+  }
+  50%,100% {
+      top: 100%;
+  }
+}
+
+.animated-border:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 4s linear infinite;
+  animation-delay: 2s
+}
+
+@keyframes btn-anim3 {
+  0% {
+      right: -100%;
+  }
+  50%,100% {
+      right: 100%;
+  }
+}
+
+.animated-border:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 4s linear infinite;
+  animation-delay: 3s
+}
+
+@keyframes btn-anim4 {
+  0% {
+      bottom: -100%;
+  }
+  50%,100% {
+      bottom: 100%;
+  }
+}
+
+
+//---------
+.border-animation {
+  --border-width: 2px;
+  --animation-speed: 0.5s;
+  --color:var(--primary-step-300);
+  color: var(--color);
+  position: relative;
+  display: inline-block;
+  transform: scale(1, 0.8);
+  border: var(--border-width) solid transparent;
+  
+  .border-animation-inner {
+    position: relative;
+    display: inline-block;
+    
+    text-transform: uppercase;
+    cursor: pointer;
+    // background: rgba(50, 50, 50, 0.5);
+    background: var(--background);
+    z-index: 1;
+    border: solid var(--border-width) var(--primary);
+  }
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    background: var(--color);
+  }
+  
+  &:focus:before,
+  &:hover:before {
+    animation: beforeBorders var(--animation-speed) forwards ease-in-out;
+  }
+
+  &:focus:after,
+  &:hover:after {
+    animation: afterBorders var(--animation-speed) forwards ease-in-out;
+  }
+  
+  &:focus,
+  &:hover {
+    animation: borderColors var(--animation-speed) steps(1) forwards;
+    outline: none;
+
+    .border-animation__inner {
+      animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out;
+      animation-delay: calc(var(--animation-speed) / 5 * 2);
+    }
+  }
+}
+
+@keyframes beforeBorders {
+  0% {
+    top: calc(var(--border-width) * -1);
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    width: 0;
+    height: var(--border-width);
+  }
+  33% {    
+    top: calc(var(--border-width) * -1);
+    left: calc(var(--border-width) * -1);
+    bottom: auto;
+    right: auto;
+    width: calc(var(--border-width) + 50%);
+    height: var(--border-width);
+  }
+  66% {
+    top: calc(var(--border-width) * -1);
+    left: calc(var(--border-width) * -1);
+    bottom: auto;
+    right: auto;
+    width: var(--border-width);
+    height: calc((var(--border-width) * 2) + 100%);
+  }
+  100% {
+    top: auto;
+    left: calc(var(--border-width) * -1);
+    bottom: calc(var(--border-width) * -1);
+    right: auto;
+    width: calc(var(--border-width) + 50%);
+    height: calc((var(--border-width) * 2) + 100%);
+  }
+}
+
+@keyframes afterBorders {
+  0% {
+    top: calc(var(--border-width) * -1);
+    left: auto;
+    bottom: auto;
+    right: 50%;
+    width: 0;
+    height: var(--border-width);
+  }
+  33% {    
+    top: calc(var(--border-width) * -1);
+    left: auto;
+    bottom: auto;
+    right: calc(var(--border-width) * -1);
+    width: calc(var(--border-width) + 50%);
+    height: var(--border-width);
+  }
+  66% {
+    top: calc(var(--border-width) * -1);
+    left: auto;
+    bottom: auto;
+    right: calc(var(--border-width) * -1);
+    width: var(--border-width);
+    height: calc((var(--border-width) * 2) + 100%);
+  }
+  100% {
+    top: auto;
+    left: auto;
+    bottom: calc(var(--border-width) * -1);
+    right: calc(var(--border-width) * -1);
+    width: calc(var(--border-width) + 50%);
+    height: calc((var(--border-width) * 2) + 100%);
+  }
+}
+
+@keyframes borderColors {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  33% {
+    border-top-color: var(--color);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+
+  }
+  66% {
+    border-top-color: var(--color);
+    border-right-color: var(--color);
+    border-bottom-color: transparent;
+    border-left-color: var(--color);
+  }
+  100% {
+    border-top-color: var(--color);
+    border-right-color: var(--color);
+    border-bottom-color: var(--color);
+    border-left-color: var(--color);
+  }
+}
+
+@keyframes background {
+  to {
+    background: #555;
+    text-shadow: 0 0.1em 0.1em #111;
+  }
+}
+
+//------------------------
+
+$anime-time: 8s;
+
+$box-size: 100%;
+$clip-distance: .05;
+$clip-size: $box-size * (1 + $clip-distance * 2);
+$path-width: 1%;
+
+$main-color: #69ca62;
+
+
+%full-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bb {
+  @extend %full-fill;
+  width: $box-size;
+  height: $box-size;
+  margin: auto;
+  color: $main-color;
+  box-shadow: inset 0 0 0 1px rgba($main-color, .5);
+
+  &::before,
+  &::after {
+    @extend %full-fill;
+    content: '';
+    z-index: -1;
+    margin: -1 * $clip-distance * 100%;
+    box-shadow: inset 0 0 0 $path-width; 
+    animation: clipMe $anime-time linear infinite;
+  }
+
+  &::before {
+    animation-delay: $anime-time * -.5;
+  }
+
+  // for debug
+  &:hover {
+    &::after,
+    &::before {
+      background-color: rgba(#f00, .3);
+    }
+  }
+
+}
+
+@keyframes clipMe {
+  0%, 100% {clip: rect(0%, $clip-size, $path-width, 0%); }
+  25% {clip: rect(0%, $path-width, $clip-size, 0%); }
+  50% {clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0%); }
+  75% {clip: rect(0%, $clip-size, $clip-size, $clip-size - $path-width); }
+}
+
+//--
+.frame-animation {
+  border: 1px solid #333;
+  font-family: 'Cinzel', serif;
+  //font-size: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 0.3s;
+}
+
+.frame-animation::before, .frame-animation::after {
+  position: absolute;
+  background: var(--background);
+  z-index: -1;
+  transition: 0.3s;
+  content: '';
+}
+
+.frame-animation::before {
+  height: 110%;
+  width: 50%;
+}
+
+.frame-animation::after {
+  width: 110%;
+  height: 50%;
+}
+
+.frame-animation:hover::before {
+  width: 0px;
+  background: #fff;
+}
+
+.frame-animation:hover::after {
+  height: 100%;
+  background: #fff;
+}
+
+.frame-animation:hover {
+  background: #fff;
+}

@@ -90,14 +90,24 @@ export const Ul = styled.ul<INav>`
     text-transform: none;
     color: #000;
     cursor: pointer;
-
+    margin:1em;
     &:hover {
-      color: #0DADEA;
+      color: var(--primary-step-950);
+    }
+
+    &.active{
+      color:var(--primary-step-950);
+      border: 2px solid var(--primary-step-300);
+
+      &::before, ::after{
+        height:100%;
+        height:100%;
+      }
     }
   }
 
   li {
-    padding: 2em 1em;
+    padding:  0.5em;
   }
 
   @media (max-width: 768px) {

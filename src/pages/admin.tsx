@@ -48,28 +48,44 @@ const Admin = () => {
         //     </div>
         // </div>
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <div id="admin-page">
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="input">
-                    <input type="text" className="input-field" value="Alexander Parkinson" required/>
-                    <label className="input-label">Full name</label>
-                </div>
+        <div className="page" id="admin-page">
+            <div className="card">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="input">
+                        <input type="text" className="input-field" value="Alexander Parkinson" required/>
+                        <label className="input-label">Full name</label>
+                    </div>
 
-                <input defaultValue="test" {...register("example")} />
-                <input 
-                    required={true}
-                    type="file"
-                    {...register("file")}
-                    id='photo'
-                    name='photo'
-                    multiple={true}
-                    accept='image/png, image/jpeg'
-                    onChange={changeHandler}
-                />
-                {errors.exampleRequired && <span>This field is required</span>}
-                
-                <input type="submit" />
-            </form>
+                    <input defaultValue="test" {...register("example")} />
+                    <input 
+                        required={true}
+                        type="file"
+                        {...register("file")}
+                        id='photo'
+                        name='photo'
+                        multiple={true}
+                        accept='image/png, image/jpeg'
+                        onChange={changeHandler}
+                    />
+
+          
+                    <div className="form-group file-area">
+                            <label >Images <span>Your images should be at least 400x300 wide</span></label>
+                        <input type="file"  id="images" required={true} multiple={true} {...register("file")}
+             
+                        accept='image/png, image/jpeg'
+                        onChange={changeHandler}/>
+                        <div className="file-dummy">
+                        <div className="success">Great, your files are selected. Keep on.</div>
+                        <div className="default">Please select some files</div>
+                        </div>
+                    </div>
+                    {errors.exampleRequired && <span>This field is required</span>}
+                    
+                    <input type="submit" />
+                </form>
+            </div>
+            
         </div>
         
     )
