@@ -1,6 +1,7 @@
 import { Component, useState } from "react";
 import ProgressBar from "../components/progressbar/progressbar";
 import { useForm, SubmitHandler } from "react-hook-form";
+import './admin.scss'
 type Inputs = {
     example: string,
     exampleRequired: string,
@@ -47,22 +48,30 @@ const Admin = () => {
         //     </div>
         // </div>
         /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <input defaultValue="test" {...register("example")} />
-            <input 
-            required={true}
-            type="file"
-            {...register("file")}
-            id='photo'
-            name='photo'
-            multiple={true}
-            accept='image/png, image/jpeg'
-            onChange={changeHandler}
-            />
-            {errors.exampleRequired && <span>This field is required</span>}
+        <div id="admin-page">
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="input">
+                    <input type="text" className="input-field" value="Alexander Parkinson" required/>
+                    <label className="input-label">Full name</label>
+                </div>
+
+                <input defaultValue="test" {...register("example")} />
+                <input 
+                    required={true}
+                    type="file"
+                    {...register("file")}
+                    id='photo'
+                    name='photo'
+                    multiple={true}
+                    accept='image/png, image/jpeg'
+                    onChange={changeHandler}
+                />
+                {errors.exampleRequired && <span>This field is required</span>}
+                
+                <input type="submit" />
+            </form>
+        </div>
         
-        <input type="submit" />
-    </form>
     )
 }
 export default Admin;
