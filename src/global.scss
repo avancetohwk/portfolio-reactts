@@ -14,8 +14,7 @@
         display: block;
     }
 
-    @media (max-width: 768px) {
-        margin-top:20%;
+    @media (max-width: 767px) {
 
         .screen-sm{
             display: block;
@@ -30,7 +29,7 @@
         }
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
 
         .screen-sm{
             display: none;

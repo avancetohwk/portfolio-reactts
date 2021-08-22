@@ -27,7 +27,7 @@ class About extends Component<RouteComponentProps> {
                     </div>
                     
                     
-                    <div className="inner-card">
+                    <div className="inner-card drawn-border">
                         <div className="inner-card-content">
                             <div id="text-container">
                                 <h1>About Me</h1>

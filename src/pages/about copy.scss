@@ -1,0 +1,185 @@
+@import '../mixins.scss';
+
+#about-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .card{
+        height: 100%;
+        
+        display: flex;
+        width: fit-content;
+        position: relative;
+        align-items: center;
+        width: 80vw;
+        flex-direction: column;
+
+        #portrait-container{
+            
+            height: unset;
+            width:auto;
+            z-index: 3;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            img{
+                height: 20vh;
+                position: unset;
+                margin: 0;
+            }
+        }
+
+        .inner-card{
+            margin: 0;
+            padding: 1em;
+            box-shadow:  0.1em 0.1em 0.2em rgb(250, 249, 246),
+                            -0.1em -0.1em 0.2em rgb(255, 255, 255);
+    
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            border:solid 7px #41403E;
+
+            .inner-card-content{
+                //flex-wrap: wrap;
+
+
+                #text-container, #skills-container{
+                    padding: 1em;
+                }
+            }
+
+            
+        }
+
+    }
+
+
+
+
+    
+
+    @media (max-width: 600px) {
+        
+        
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 0;
+        .card{
+            width: 80vw;
+            flex-direction: column;
+
+            #portrait-container{
+                
+                height: unset;
+                width:auto;
+                z-index: 3;
+                position: relative;
+                display: flex;
+                justify-content: center;
+    
+                img{
+                    height: 20vh;
+                    position: unset;
+                    margin: 0;
+                }
+            }
+
+            .inner-card{
+                margin: 0;
+                padding: 1em;
+
+                
+
+            }
+    
+        }
+    }
+
+
+    @media (min-width: 1024px) {
+        
+        .card{
+            flex-direction: row;
+            //background-color: red;
+            height: 100%;
+            max-width: 75vw;
+            display: flex;
+            width: fit-content;
+            // flex-direction: column;
+            // justify-content: flex-end;
+            position: relative;
+            align-items: center;
+            #portrait-container{
+                height: 100%;
+                
+                width:auto;
+                z-index: 3;
+                position: relative;
+    
+                img{
+                    height: 100%;
+                    position: absolute;
+                    right: -5em;
+                    bottom:0;
+                }
+            }
+    
+            
+    
+            .inner-card{
+                
+                position: relative;
+                background: rgba(250, 249, 246, 0.25);
+                backdrop-filter: blur(0.2em);
+                -webkit-backdrop-filter: blur( 0.2em);
+    
+                display:flex;
+                align-items: center;
+                padding: 5em;
+                margin: 5em 0;
+                
+    
+    
+                .inner-card-content{
+                    display: flex;
+                    flex-direction: row;
+                    #text-container{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: baseline;
+                        padding: 0 2em; //3em 0;
+                        width: 50%;
+                        p{
+                            text-align: justify;
+                        }
+                    }
+    
+                    #skills-container{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: baseline;
+                        padding: 0 2em;
+                        width: 50%;
+                        p{
+                            text-align: justify;
+                        }
+                
+                        
+                        
+    
+                        
+                    }
+                }
+    
+                
+    
+                
+            }
+        }
+    }
+
+    
+}
+
