@@ -84,17 +84,18 @@ const Admin: React.FC = () => {
         
 
         <div className="page" id="admin-page">
-            <div className="card">
+            <div className="card drawn-border">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     
 
                     <div className="input toggle-container">
                         <input className="toggle" type="checkbox" name="switch" id="switch" defaultChecked={toggleChecked}
-        onChange={() => setToggleChecked(!toggleChecked)}></input>
+                                onChange={() => setToggleChecked(!toggleChecked)}></input>
                         <label className="toggle-label" htmlFor="switch"></label>
+                        <label className="input-label" htmlFor="switch">{toggleChecked?'New Category': 'Category'}</label>
                     </div>
                     <div>
-                        {toggleChecked && 
+                        {!toggleChecked && 
                             <div className="input">
                                 <select className="input-field" id="category-select" name="category">
                                     <option value="volvo">Volvo</option>
@@ -104,7 +105,7 @@ const Admin: React.FC = () => {
                                 </select>
                             </div>
                         }
-                        {!toggleChecked && 
+                        {toggleChecked && 
                             <div className="input">
                                 <input type="text" className="input-field" value="Alexander Parkinson" required/>
                             </div>

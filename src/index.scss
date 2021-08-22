@@ -78,6 +78,10 @@ h1{
   color: var(--text-dark)
 }
 
+.drawn-border{
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
 
 @media screen and (min-width:1024px){
   body{

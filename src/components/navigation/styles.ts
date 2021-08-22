@@ -91,6 +91,7 @@ export const Ul = styled.ul<INav>`
     color: #000;
     cursor: pointer;
     margin:1em;
+    border-width:2px;
     &:hover {
       color: var(--primary-step-950);
     }

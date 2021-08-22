@@ -27,7 +27,7 @@ function RightNav(props: Props) {
             activeStyle={{
                 fontWeight: "bold"
             }}
-            className="frame-animation"
+            className="frame-animation drawn-border"
             >
             {/* <span className="animated-border"></span>
             <span className="animated-border"></span>
@@ -38,7 +38,7 @@ function RightNav(props: Props) {
             activeStyle={{
                 fontWeight: "bold",
             }}
-            className="frame-animation"
+            className="frame-animation drawn-border"
             >
             <li className="frame-animation-inner">Work</li>
             </NavLink>
@@ -46,7 +46,7 @@ function RightNav(props: Props) {
             activeStyle={{
                 fontWeight: "bold"
             }}
-            className="frame-animation"
+            className="frame-animation drawn-border"
             >
             <li className="frame-animation-inner">Contact</li>
             </NavLink>
@@ -55,7 +55,7 @@ function RightNav(props: Props) {
             activeStyle={{
                 fontWeight: "bold"
             }}
-            className="frame-animation"
+            className="frame-animation drawn-border"
             >
             <li className="frame-animation-inner">Admin</li>
             </NavLink>
